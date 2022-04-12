@@ -19,13 +19,13 @@
 
 #### Setup the environment using the requirements.txt file
 
-creating the labelled dataset ('data/labelled_dataset.csv') from the name.ttl and person.ttl files:
+### creating the labelled dataset ('data/labelled_dataset.csv') from the name.ttl and person.ttl files:
 
 	```python name_classifier.py load_data --in-folder 'data'```
 
 #### This will create the labelled_dataset.csv in the data directory.
 
-###preparing the dataset, splitting the dataset into train, validation and test sets and training the model:
+### Preparing the dataset, splitting the dataset into train, validation and test sets and training the model:
 	```python name_classifier.py --train --in_folder 'data/labelled_dataset.csv' --out_folder 'weights/450k-64BS-multilingual-encoder-froze-30epochs.pth'   --sample_size 450000 --plot False```
 
 Example: 
