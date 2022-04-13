@@ -8,8 +8,8 @@
 #### Download and extract the name.ttl and person.ttl into the 'data/' directory: Download link: https://episerver99-my.sharepoint.com/:u:/g/personal/zsolt_pocsaji_episerver_com/EeHdaCtLJP1HlurrLtBOKxcBsq4JhkiLJqw7f1sAmwa_ZQ?e=uNbuqJ
 
 #### Download the weights and put into the 'weights/' directory (Also can be found in the above link in the 'name_classifier/weights/' directory:
-	* 300k-32BS-multilingual-encoder-unfroze.pth : https://drive.google.com/file/d/16ppv9ioC1oX54HmWbznyGea4q_IDIq01/view?usp=sharing
-	* 450k-64BS-multilingual-encoder-froze-30epochs.pth : https://drive.google.com/file/d/1qPY79qiCLTjsEXvqIyp9mZiDvuj-dBLg/view?usp=sharing
+- 300k-32BS-multilingual-encoder-unfroze.pth : https://drive.google.com/file/d/16ppv9ioC1oX54HmWbznyGea4q_IDIq01/view?usp=sharing
+- 450k-64BS-multilingual-encoder-froze-30epochs.pth : https://drive.google.com/file/d/1qPY79qiCLTjsEXvqIyp9mZiDvuj-dBLg/view?usp=sharing
 
 #### The test set accuracy of the 2nd model is about **92%** and for the 1st model is about **87.6%**. But the 1st model **'weights/300k-32BS-multilingual-encoder-unfroze.pth'** is really heavy and if the GPU is not powerful enough, it will throw CUDA out of memory error while loading the model. However, the 2nd model **'weights/450k-64BS-multilingual-encoder-froze-30epochs.pth'** is much lighter since the number of trainable parameters are much lower than the first one. The training of the 1st model is shown in the google colab notebook in the 'colab_notebooks/' directory. It can be reproduced by training the model by setting freeze_bert to False.
 
