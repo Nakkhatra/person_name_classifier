@@ -20,16 +20,21 @@
 #### Setup the environment using the requirements.txt file
 
 ### creating the labelled dataset ('data/labelled_dataset.csv') from the name.ttl and person.ttl files:
-
-	```python name_classifier.py load_data --in-folder 'data'```
+```
+python name_classifier.py load_data --in-folder 'data'
+```
 
 #### This will create the labelled_dataset.csv in the data directory.
 
 ### Preparing the dataset, splitting the dataset into train, validation and test sets and training the model:
-	```python name_classifier.py --train --in_folder 'data/labelled_dataset.csv' --out_folder 'weights/450k-64BS-multilingual-encoder-froze-30epochs.pth'   --sample_size 450000 --plot False```
+```
+python name_classifier.py --train --in_folder 'data/labelled_dataset.csv' --out_folder 'weights/450k-64BS-multilingual-encoder-froze-30epochs.pth'   --sample_size 450000 --plot False
+```
 
 Example: 
-	```python name_classifier.py --train --in_folder --out_folder  --sample_size --plot False```
+```
+python name_classifier.py --train --in_folder --out_folder  --sample_size --plot False
+```
 
 	* --in_folder: corresponds to the data containing the csv files
 	* --out_folder: corresponds to a folder where the trained model will be serialised to
@@ -37,9 +42,13 @@ Example:
 	* --plot: (bool) True by default. If set to false, the model will not plot the learning curves after finishing training.
 
 ### This will evaluate the model on the test dataset and print the scores along with confusion matrix if print_reports is set to True.
-	```python name_classifier.py evaluate_model --in_folder --weightsdir --sample_size --print_reports```
+```
+python name_classifier.py evaluate_model --in_folder --weightsdir --sample_size --print_reports
+```
 Example:
-	```python name_classifier.py evaluate_model --in_folder 'data/labelled_dataset.csv' --weightsdir 'weights/450k-64BS-multilingual-encoder-froze-25epochs.pth' --sample_size 450000 --print_reports False```
+```
+python name_classifier.py evaluate_model --in_folder 'data/labelled_dataset.csv' --weightsdir 'weights/450k-64BS-multilingual-encoder-froze-25epochs.pth' --sample_size 450000 --print_reports False
+```
 
 	* --in_folder: Directory of the labelled dataset .csv file
 	* --weightsdir: Directory of the trained saved weights
